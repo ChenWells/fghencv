@@ -1,353 +1,1575 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>陳富國｜個人線上 CV</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;family=Chiron+GoRound+TC:wght@400;500;700&amp;display=swap"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;family=Chiron+GoRound+TC:wght@400;500;700&amp;display=swap" media="print" onload="this.media='all'"/>
-    <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;family=Chiron+GoRound+TC:wght@400;500;700&amp;display=swap"/>
-    </noscript>
-    <link href="css/font-awesome/css/all.min.css?ver=1.2.0" rel="stylesheet">
-    <link href="css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
-    <link href="css/aos.css?ver=1.2.0" rel="stylesheet">
-    <link href="css/main.css?ver=1.2.0" rel="stylesheet">
-    <style>
-      :root {
-        --first-color: #00204a;
-        --second-color: #005792;
-        --third-color: #00bbf0;
-        --fourth-color: #fdb44b;
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Open Graph Meta Tags -->
+  <title>陳富國 博士 ｜ 智慧科技與資訊系統專家・個人線上履歷</title>
+  <meta name="description" content="陳富國 博士（Dr. Fu-Kuo Chen）個人線上 CV。弘光科技大學副主任/助理教授，擁有 20+ 年教學經驗、25+ 專業證照、50+ 研究專案，專精於智慧科技、物聯網、AI 應用、Web 開發與產學合作。">
+  <meta name="keywords" content="陳富國, 博士, 智慧科技, 資訊系統, 物聯網, IoT, AI, Web開發, 弘光科技大學, 演講邀約, 產學合作">
+  <meta name="author" content="陳富國 博士">
+  
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="陳富國 博士 ｜ 智慧科技與資訊系統專家・個人線上履歷">
+  <meta property="og:description" content="擁有 20+ 年教學與研究經驗，致力於智慧科技應用、物聯網、Web開發與教育創新。歡迎演講邀約與產學合作。">
+  <meta property="og:image" content="images/fgchen-croped.png">
+  <meta property="og:url" content="https://fgchen.com/">
+
+  <!-- Google Font: Chiron GoRound TC (昭源黑體 / 圓體) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // style.md 規範配色
+            primary: {
+              DEFAULT: '#005689', // .first-color
+              dark: '#003d63',
+              light: '#006ea8',
+            },
+            secondary: {
+              DEFAULT: '#007cb9', // .second-color
+              dark: '#006394',
+              light: '#239ad6',
+            },
+            surface: {
+              DEFAULT: '#d5eeff', // .third-color
+              light: '#eef8ff',
+              dark: '#b9e0fc',
+            },
+            accent: {
+              DEFAULT: '#ff895d', // .fourth-color (CTA 珊瑚橘)
+              hover: '#f57442',
+              light: '#ffa985',
+              dark: '#e05c28',
+            },
+          },
+          fontFamily: {
+            sans: ['"Chiron GoRound TC"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          },
+          boxShadow: {
+            'custom-card': '0 10px 25px -5px rgba(0, 86, 137, 0.08), 0 8px 10px -6px rgba(0, 86, 137, 0.04)',
+            'custom-hover': '0 20px 30px -10px rgba(0, 86, 137, 0.16)',
+            'accent-glow': '0 10px 20px -5px rgba(255, 137, 93, 0.4)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- React 18 & Babel Standalone for In-Browser JSX -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Print & Print-Friendly Styles (@media print) -->
+  <style>
+    @media print {
+      .no-print {
+        display: none !important;
       }
       body {
-        font-family: 'Chiron GoRound TC', 'Roboto', sans-serif;
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-size: 12pt;
       }
-      .cover-bg {
-        background: linear-gradient(120deg, var(--first-color), var(--second-color));
+      .print-page-break {
+        page-break-before: always;
       }
-      .section-chip {
-        display: inline-block;
-        margin: 0 0.4rem 0.35rem 0;
-        border-radius: 999px;
-        padding: 0.25rem 0.65rem;
-        background: rgba(0, 187, 240, 0.12);
-        color: #005792;
-        font-size: 0.84rem;
+      .break-inside-avoid {
+        break-inside: avoid;
+        page-break-inside: avoid;
       }
-      .mini-card {
-        border: 1px solid #e6e9ed;
-        border-radius: 12px;
-        box-shadow: 0 0.25rem 0.7rem rgba(0, 32, 74, 0.07);
-        height: 100%;
+      .shadow-none-print {
+        box-shadow: none !important;
+        border: 1px solid #e2e8f0 !important;
       }
-    </style>
-    <noscript>
-      <style type="text/css">
-        [data-aos] {
-            opacity: 1 !important;
-            transform: translate(0) scale(1) !important;
+    }
+    
+    /* 滾動條樣式美化 */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #007cb9;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #005689;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-accent/30 selection:text-primary-dark">
+  <div id="root"></div>
+
+  <!-- React Application Logic -->
+  <script type="text/babel">
+    const { useState, useEffect, useRef } = React;
+
+    // =========================================================================
+    // 後端 Google Apps Script (GAS) Web App 網址設定
+    // 佈署後將 GAS URL 填入下方常數；若為空值則會啟動優雅的模擬測試模式
+    // =========================================================================
+    const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbw040Ke0NksX-d1iXqHzXeO1wkX7-zg6RFm-6SzU3ZgC_5YjNRX-qCm7fB5LK1j-Pad/exec"; 
+
+    // =========================================================================
+    // 資料結構 (從 cv-data.md 完整萃取)
+    // =========================================================================
+    const CV_DATA = {
+      name: "陳富國 博士",
+      englishName: "Dr. Fu-Kuo Chen",
+      title: "智慧科技與資訊系統專家",
+      bio: "擁有超過 20 年教學與研究經驗，致力於智慧科技應用、物聯網、Web開發與教育創新。",
+      stats: [
+        { count: "20+", label: "年教學經驗", icon: "fa-chalkboard-user", desc: "產學育才・行政管理" },
+        { count: "25+", label: "專業證照", icon: "fa-certificate", desc: "資安・微軟・Java・專案" },
+        { count: "50+", label: "研究專案", icon: "fa-diagram-project", desc: "AI・物聯網・Web全端" },
+        { count: "100+", label: "學生指導", icon: "fa-user-graduate", desc: "專題競賽・就業培訓" },
+      ],
+      experiences: [
+        {
+          period: "2023/2 – 2024/1",
+          role: "副主任",
+          organization: "弘光科技大學 智慧科技應用系",
+          desc: "負責系務規劃與行政管理，推動智慧科技教育與產學合作，深化學生實務研發能力。",
+          icon: "fa-building-columns",
+          badge: "行政與產學推動"
+        },
+        {
+          period: "2022/2 – 現任",
+          role: "助理教授",
+          organization: "弘光科技大學 資工系 / 智慧科技應用系",
+          desc: "擔任智慧科技相關課程講授，指導學生專題與研究，主導物聯網與人工智慧整合實作專案。",
+          icon: "fa-laptop-code",
+          badge: "智慧科技專任"
+        },
+        {
+          period: "2008/2 – 2022/1",
+          role: "助理教授",
+          organization: "弘光科技大學 資訊管理系",
+          desc: "教授資訊管理、程式設計與全端系統開發等核心課程，培育無數資訊軟體業界人才。",
+          icon: "fa-code",
+          badge: "資管核心師資"
+        },
+        {
+          period: "1999/8 – 2008/1",
+          role: "講師",
+          organization: "弘光科技大學 資訊管理系",
+          desc: "負責基礎程式設計與資訊管理課程授課，奠定學生紮實的程式基礎與運算思維。",
+          icon: "fa-chalkboard",
+          badge: "基礎程式教學"
+        },
+        {
+          period: "1998/9 – 1999/7",
+          role: "講師",
+          organization: "親民工商專校 電機科",
+          desc: "電機相關專業課程教學，傳授電機控制與電路基礎原理。",
+          icon: "fa-bolt",
+          badge: "電機工程"
+        },
+        {
+          period: "1992/8 – 1995/2",
+          role: "大型電腦技術員",
+          organization: "台灣國際標準電子公司 (Alcatel-Lucent)",
+          desc: "負責企業級大型電腦主機系統維護、技術支援與網路硬體維運，累積堅實業界硬體與系統底層經驗。",
+          icon: "fa-server",
+          badge: "業界實務經歷"
         }
-      </style>
-    </noscript>
-  </head>
-  <body id="top">
-    <header class="d-print-none">
-      <div class="container text-center text-lg-left">
-        <div class="py-3 clearfix">
-          <h1 class="site-title mb-0">陳富國 Chen FuKuo</h1>
-          <div class="site-nav">
-            <nav role="navigation">
-              <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link" href="mailto:fgchen@gmail.com" title="Email"><i class="fas fa-envelope"></i><span class="menu-title sr-only">Email</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="https://www.facebook.com" title="Facebook"><i class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/chen_fukou" title="Instagram"><i class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="https://github.com/chenfukou" title="Github"><i class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a>
-                </li>
-              </ul>
+      ],
+      projects: [
+        {
+          id: 1,
+          title: "智慧餐飲系統設計與實現",
+          category: "web_iot",
+          categoryLabel: "AI 與物聯網",
+          techs: ["React", "Node.js", "IoT", "全端架構"],
+          desc: "整合外帶內用點餐、即時庫存盤點與 AI 銷售大數據分析的全方位智慧餐飲管理解決方案，大幅降低店家營運損耗。",
+          icon: "fa-utensils"
+        },
+        {
+          id: 2,
+          title: "小智 AI 招生客服機器人",
+          category: "ai_iot",
+          categoryLabel: "AI 與物聯網",
+          techs: ["NLP", "Python", "TensorFlow", "對話系統"],
+          desc: "基於深度學習與自然語言處理（NLP）的智能招生諮詢系統，具備多輪對話理解與全天候自動化入學諮詢回答能力。",
+          icon: "fa-robot"
+        },
+        {
+          id: 3,
+          title: "虛實融合無人機訓練模擬系統",
+          category: "edtech_sim",
+          categoryLabel: "創新教育與模擬",
+          techs: ["Unity", "VR", "無人機", "沉浸式互動"],
+          desc: "結合 VR 虛擬實境技術與實體飛行手把體驗的無人機操作訓練平台，提供安全且高擬真的飛行操縱教學情境。",
+          icon: "fa-vr-cardboard"
+        },
+        {
+          id: 4,
+          title: "WordPress 前端設計教學與實作",
+          category: "edtech_sim",
+          categoryLabel: "創新教育與模擬",
+          techs: ["WordPress", "教育創新", "網頁設計", "UI/UX"],
+          desc: "專門針對非資訊背景大專學生的網站開發課程與教材研發，採階梯式實作教學法，讓初學者能在短時間內建構出商業級網站。",
+          icon: "fa-wordpress"
+        },
+        {
+          id: 5,
+          title: "IoT 滴灌照明控制系統",
+          category: "ai_iot",
+          categoryLabel: "AI 與物聯網",
+          techs: ["Arduino", "IoT", "智慧農業", "自動控制"],
+          desc: "智能農業創新應用，整合土壤濕度感測器、光照計與自動化精準閥門控制的灌溉照明整合系統，節水節能成效卓著。",
+          icon: "fa-seedling"
+        },
+        {
+          id: 6,
+          title: "全端設備維修管理系統",
+          category: "web_fullstack",
+          categoryLabel: "Web 全端系統",
+          techs: ["Vue.js", "Flask", "SQL", "RWD"],
+          desc: "響應式設備維護與報修追蹤系統，支援多平台跨裝置操作，提供維修派工進度即時可視化與歷史履歷追蹤。",
+          icon: "fa-toolbox"
+        }
+      ],
+      skills: [
+        {
+          category: "程式設計",
+          icon: "fa-code",
+          items: ["JavaScript / Node.js", "Python", "PHP", "C#", "Java"],
+          highlight: "跨語言全方位程式實作能力"
+        },
+        {
+          category: "Web 開發",
+          icon: "fa-globe",
+          items: ["HTML5 / CSS3", "React / Vue.js", "WordPress", "Bootstrap / Tailwind", "RESTful API"],
+          highlight: "現代前後端分離與元件化架構"
+        },
+        {
+          category: "智慧科技",
+          icon: "fa-microchip",
+          items: ["物聯網 (IoT)", "人工智慧應用 (AI)", "虛擬實境 (VR)", "大數據分析", "雲端運算架構"],
+          highlight: "軟硬體整合與智慧場域應用"
+        },
+        {
+          category: "教育與研究",
+          icon: "fa-graduation-cap",
+          items: ["創新教學方法", "專題與競賽指導", "學術論文研究", "跨領域課程設計", "產學合作案推動"],
+          highlight: "20年豐富教學傳承與產學接軌"
+        }
+      ],
+      certificates: [
+        { category: "security", catName: "資訊安全", name: "iPAS資訊安全工程師初級", year: "2024/7", issuer: "經濟部" },
+        { category: "security", catName: "資訊安全", name: "CompTIA Security+ (SY0-301)", year: "2013/4", issuer: "CompTIA" },
+        { category: "dev_game", catName: "系統與遊戲", name: "水冷式電腦技術初級執照", year: "2019/10", issuer: "專業技術認證" },
+        { category: "dev_game", catName: "系統與遊戲", name: "TQC+ 創意APP程式設計", year: "2017/9", issuer: "電腦技能基金會" },
+        { category: "dev_game", catName: "系統與遊戲", name: "軟體測試工程師 (Software Testing)", year: "2017/7", issuer: "經濟部 / 資訊專業" },
+        { category: "dev_game", catName: "系統與遊戲", name: "ITE 遊戲企畫", year: "2020/1", issuer: "經濟部專業人員" },
+        { category: "dev_game", catName: "系統與遊戲", name: "ITE 遊戲美術", year: "2020/1", issuer: "經濟部專業人員" },
+        { category: "dev_game", catName: "系統與遊戲", name: "ITE 數位內容遊戲概論", year: "2020/1", issuer: "經濟部專業人員" },
+        { category: "pm", catName: "專案管理", name: "PMI Project Management Professional (PMP)", year: "2013-2019", issuer: "PMI 國際專案管理學會" },
+        { category: "microsoft", catName: "微軟認證", name: "Microsoft Specialist: Programming in HTML5 with JavaScript and CSS3", year: "2013/3", issuer: "Microsoft" },
+        { category: "microsoft", catName: "微軟認證", name: "MTA - Mobile Development Fundamentals", year: "2013/3", issuer: "Microsoft" },
+        { category: "microsoft", catName: "微軟認證", name: "Microsoft Certified Technology Specialist (MCTS)", year: "2009/6", issuer: "Microsoft" },
+        { category: "microsoft", catName: "微軟認證", name: "MCTS: SQL Server 2005 Implementation & Maintenance", year: "2009/6", issuer: "Microsoft" },
+        { category: "microsoft", catName: "微軟認證", name: "MCTS: Windows Vista Configuration", year: "2009/6", issuer: "Microsoft" },
+        { category: "java", catName: "Java 認證", name: "Sun Certified Web Component Development (SCWCD)", year: "2008", issuer: "Sun Microsystems" },
+        { category: "java", catName: "Java 認證", name: "Sun 認可之 Java 程式設計講師 (Instructor)", year: "2007", issuer: "Sun Microsystems" },
+        { category: "java", catName: "Java 認證", name: "Sun Certified Java Programmer (SCJP)", year: "2004", issuer: "Sun Microsystems" },
+        { category: "network", catName: "網路與其他", name: "經濟部 ITE – 嵌入式系統軟體開發專業人員", year: "2009/5", issuer: "經濟部" },
+        { category: "network", catName: "網路與其他", name: "經濟部 ITE – 資訊管理類", year: "2005", issuer: "經濟部" },
+        { category: "network", catName: "網路與其他", name: "經濟部 ITE – 網路管理類", year: "2005", issuer: "經濟部" },
+        { category: "network", catName: "網路與其他", name: "NOVELL Netware 3 CNE", year: "1996", issuer: "Novell" },
+        { category: "network", catName: "網路與其他", name: "NOVELL CNE (Certified Novell Engineer)", year: "1995", issuer: "Novell" },
+        { category: "network", catName: "網路與其他", name: "NOVELL Netware 3.1x Advanced Administrator", year: "1994", issuer: "Novell" },
+        { category: "network", catName: "網路與其他", name: "NOVELL Netware 3.1x Administrator", year: "1994", issuer: "Novell" }
+      ],
+      education: [
+        {
+          degree: "博士學位 (Ph.D.)",
+          period: "1999/9 – 2007/1",
+          school: "國立成功大學 (NCKU)",
+          department: "工程科學系 (計算機組)",
+          advisor: "指導教授：侯廷偉 教授",
+          desc: "專精於計算機架構、分散式系統與演算法分析，奠定深厚學術研究基石。"
+        },
+        {
+          degree: "碩士學位 (Master)",
+          period: "1996/9 – 1998/6",
+          school: "國立成功大學 (NCKU)",
+          department: "工程科學系 (計算機組)",
+          advisor: "成績優異直升研究所",
+          desc: "主修電腦通訊與系統整合。"
+        },
+        {
+          degree: "專科學位 (Associate)",
+          period: "1985/9 – 1990/6",
+          school: "國立雲林工專 (現虎尾科大)",
+          department: "電機工程科",
+          advisor: "五年制專業工程訓練",
+          desc: "紮實之電機硬體電路、自動控制與工程數學培育。"
+        }
+      ],
+      contact: {
+        emails: ["fgchen@gmail.com", "ronald@sunrise.hk.edu.tw"],
+        office: "弘光科技大學 智慧科技應用大樓 J50104",
+        address: "43302 台中市沙鹿區台灣大道六段1018號",
+        website: "https://fgchen.com/"
+      }
+    };
+
+    // =========================================================================
+    // 頂部即時到訪人數條 (TopBar Component)
+    // 支援：骨架屏、Session 防重複、Page Visibility 休眠暫停、即時連動
+    // =========================================================================
+    function TopBar() {
+      const [visitCount, setVisitCount] = useState(null);
+      const [isLoading, setIsLoading] = useState(true);
+      const [isUpdated, setIsUpdated] = useState(false);
+
+      useEffect(() => {
+        let isMounted = true;
+        let pollTimer = null;
+
+        const fetchCount = async (isInitial = false) => {
+          // 檢查 Session：若同一分頁首次造訪則 increment，重新整理則 get_only
+          const hasVisitedThisSession = sessionStorage.getItem("cv_visited_session");
+          const action = (isInitial && !hasVisitedThisSession) ? "increment" : "get_only";
+
+          if (isInitial && !hasVisitedThisSession) {
+            sessionStorage.setItem("cv_visited_session", "true");
+          }
+
+          if (GAS_WEB_APP_URL && GAS_WEB_APP_URL.trim() !== "") {
+            try {
+              const res = await fetch(`${GAS_WEB_APP_URL}?action=${action}`);
+              const data = await res.json();
+              if (data && data.visits && isMounted) {
+                setVisitCount(prev => {
+                  if (prev !== null && prev !== data.visits) {
+                    setIsUpdated(true);
+                    setTimeout(() => setIsUpdated(false), 1500);
+                  }
+                  return data.visits;
+                });
+                setIsLoading(false);
+              }
+            } catch (err) {
+              console.warn("GAS fetch error, using local fallback:", err);
+              fallbackLocal();
+            }
+          } else {
+            // 本地未設定 GAS 時的友善模擬展示
+            fallbackLocal();
+          }
+        };
+
+        const fallbackLocal = () => {
+          const cached = localStorage.getItem("cv_mock_visits") || 1358;
+          let newCount = Number(cached);
+          const hasVisitedThisSession = sessionStorage.getItem("cv_visited_session");
+          if (!hasVisitedThisSession) {
+            newCount += 1;
+            sessionStorage.setItem("cv_visited_session", "true");
+            localStorage.setItem("cv_mock_visits", newCount);
+          }
+          if (isMounted) {
+            setVisitCount(newCount);
+            setIsLoading(false);
+          }
+        };
+
+        // 初始抓取
+        fetchCount(true);
+
+        // 定時輪詢 (每 30 秒) + Page Visibility API 節省資源
+        const startPolling = () => {
+          if (pollTimer) clearInterval(pollTimer);
+          pollTimer = setInterval(() => {
+            if (document.visibilityState === "visible") {
+              fetchCount(false);
+            }
+          }, 30000);
+        };
+
+        const handleVisibilityChange = () => {
+          if (document.visibilityState === "visible") {
+            fetchCount(false);
+            startPolling();
+          } else {
+            if (pollTimer) clearInterval(pollTimer);
+          }
+        };
+
+        document.addEventListener("visibilitychange", handleVisibilityChange);
+        startPolling();
+
+        return () => {
+          isMounted = false;
+          if (pollTimer) clearInterval(pollTimer);
+          document.removeEventListener("visibilitychange", handleVisibilityChange);
+        };
+      }, []);
+
+      return (
+        <div className="bg-primary-dark text-white text-xs py-2 px-4 border-b border-primary/40 no-print transition-all">
+          <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div className="flex items-center gap-2.5">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+              </span>
+              <span className="text-slate-200 font-medium tracking-wide">
+                線上學術與專業履歷系統
+              </span>
+              <span className="hidden sm:inline-block text-slate-400">|</span>
+              <span className="hidden sm:inline-block text-surface/90 text-[11px]">
+                Google Sheet 即時連動中
+              </span>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <span className="text-slate-300">累計造訪人次：</span>
+              {isLoading ? (
+                <div className="h-4 w-14 bg-white/20 animate-pulse rounded"></div>
+              ) : (
+                <span className={`font-mono font-bold px-2 py-0.5 rounded text-white transition-all duration-300 ${
+                  isUpdated ? 'bg-accent text-slate-900 scale-110 shadow-accent-glow' : 'bg-primary/80 border border-secondary/50'
+                }`}>
+                  {visitCount ? visitCount.toLocaleString() : "1,358"}
+                </span>
+              )}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // =========================================================================
+    // 導覽列 (Navbar Component)
+    // =========================================================================
+    function Navbar({ onOpenModal }) {
+      const [isOpen, setIsOpen] = useState(false);
+      const [scrolled, setScrolled] = useState(false);
+
+      useEffect(() => {
+        const handleScroll = () => {
+          if (window.scrollY > 30) {
+            setScrolled(true);
+          } else {
+            setScrolled(false);
+          }
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, []);
+
+      const navLinks = [
+        { label: "關於我", href: "#about" },
+        { label: "專業經歷", href: "#experience" },
+        { label: "研究專案", href: "#projects" },
+        { label: "專業技能", href: "#skills" },
+        { label: "專業證照", href: "#certificates" },
+        { label: "學術背景", href: "#education" },
+        { label: "聯絡資訊", href: "#contact" },
+      ];
+
+      return (
+        <header className={`sticky top-0 z-40 transition-all duration-300 no-print ${
+          scrolled ? 'bg-white/95 backdrop-blur-md shadow-md py-3' : 'bg-white py-4 shadow-sm'
+        }`}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            {/* Logo 與名稱 */}
+            <a href="#about" className="flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-xl bg-primary text-white flex items-center justify-center font-bold text-lg shadow-sm group-hover:bg-secondary transition-colors">
+                陳
+              </div>
+              <div>
+                <div className="font-bold text-lg text-primary group-hover:text-secondary transition-colors leading-tight">
+                  {CV_DATA.name}
+                </div>
+                <div className="text-xs text-slate-500 font-medium">
+                  {CV_DATA.title}
+                </div>
+              </div>
+            </a>
+
+            {/* 桌面端選單 */}
+            <nav className="hidden lg:flex items-center gap-6">
+              {navLinks.map((link, idx) => (
+                <a
+                  key={idx}
+                  href={link.href}
+                  className="text-sm font-medium text-slate-600 hover:text-secondary hover:border-b-2 hover:border-secondary transition-all pb-1"
+                >
+                  {link.label}
+                </a>
+              ))}
             </nav>
-          </div>
-        </div>
-      </div>
-    </header>
-    <div class="page-content">
-      <div class="container">
-<div class="cover shadow-lg bg-white">
-  <div class="cover-bg p-3 p-lg-4 text-white">
-    <div class="row">
-      <div class="col-lg-4 col-md-5">
-        <div class="avatar hover-effect bg-white shadow-sm p-1"><img src="https://fgchen.com/fgchencv/images/fgchen-croped.png" width="200" height="200"/></div>
-      </div>
-      <div class="col-lg-8 col-md-7 text-center text-md-start">
-        <h2 class="h1 mt-2" data-aos="fade-left" data-aos-delay="0">陳富國</h2>
-        <p data-aos="fade-left" data-aos-delay="100">弘光科技大學｜智慧科技應用系二年級｜AI × Web × 智慧科技</p>
-        <div class="d-print-none" data-aos="fade-left" data-aos-delay="200"><a class="btn btn-light text-dark shadow-sm mt-1 me-1" href="mailto:fgchen@gmail.com">與我聯絡</a><a class="btn btn-success shadow-sm mt-1" href="#contact">聯絡資訊</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="about-section pt-4 px-3 px-lg-4 mt-1">
-    <div class="row">
-      <div class="col-md-6">
-        <h2 class="h3 mb-3">關於我</h2>
-        <p>我是一名就讀於弘光科技大學智慧科技應用系二年級的學生，對程式設計、網頁開發與人工智慧應用充滿熱忱。重視「先完成、再優化」的實作流程，並持續透過專題、競賽與團隊合作累積能力。</p>
-        <p class="mb-0"><strong>Keep Learning. Keep Creating. Keep Improving.</strong></p>
-      </div>
-      <div class="col-md-5 offset-md-1">
-        <div class="row mt-2">
-          <div class="col-sm-4">
-            <div class="pb-1">姓名</div>
-          </div>
-          <div class="col-sm-8">
-            <div class="pb-1 text-secondary">陳富國 (Chen FuKuo)</div>
-          </div>
-          <div class="col-sm-4">
-            <div class="pb-1">學校</div>
-          </div>
-          <div class="col-sm-8">
-            <div class="pb-1 text-secondary">弘光科技大學</div>
-          </div>
-          <div class="col-sm-4">
-            <div class="pb-1">系所</div>
-          </div>
-          <div class="col-sm-8">
-            <div class="pb-1 text-secondary">智慧科技應用系</div>
-          </div>
-          <div class="col-sm-4">
-            <div class="pb-1">Email</div>
-          </div>
-          <div class="col-sm-8">
-            <div class="pb-1 text-secondary">fgchen@gmail.com</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <hr class="d-print-none"/>
-  <div class="skills-section px-3 px-lg-4">
-    <h2 class="h3 mb-3">個人技能</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="mb-2"><span>HTML</span>
-          <div class="progress my-1">
-            <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="100" data-aos-anchor=".skills-section" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
-        <div class="mb-2"><span>CSS</span>
-          <div class="progress my-1">
-            <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="200" data-aos-anchor=".skills-section" style="width: 86%" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
-        <div class="mb-2"><span>JavaScript</span>
-          <div class="progress my-1">
-            <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="300" data-aos-anchor=".skills-section" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
-        <div class="mb-2"><span>Python</span>
-          <div class="progress my-1">
-            <div class="progress-bar bg-primary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="350" data-aos-anchor=".skills-section" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="mb-2"><span>Responsive Web Design</span>
-          <div class="progress my-1">
-            <div class="progress-bar bg-success" role="progressbar" data-aos="zoom-in-right" data-aos-delay="400" data-aos-anchor=".skills-section" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
-        <div class="mb-2"><span>Generative AI / Prompt Engineering</span>
-          <div class="progress my-1">
-            <div class="progress-bar bg-success" role="progressbar" data-aos="zoom-in-right" data-aos-delay="500" data-aos-anchor=".skills-section" style="width: 86%" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
-        <div class="mb-2"><span>Git / GitHub / VS Code</span>
-          <div class="progress my-1">
-            <div class="progress-bar bg-success" role="progressbar" data-aos="zoom-in-right" data-aos-delay="600" data-aos-anchor=".skills-section" style="width: 84%" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
-        <div class="mb-2"><span>Java</span>
-          <div class="progress my-1">
-            <div class="progress-bar bg-success" role="progressbar" data-aos="zoom-in-right" data-aos-delay="650" data-aos-anchor=".skills-section" style="width: 76%" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="mt-2">
-      <span class="section-chip">DOM</span><span class="section-chip">Fetch API</span><span class="section-chip">REST API</span><span class="section-chip">ChatGPT</span><span class="section-chip">GitHub Copilot</span><span class="section-chip">Figma</span>
-    </div>
-  </div>
-  <hr class="d-print-none"/>
-  <div class="work-experience-section px-3 px-lg-4">
-    <h2 class="h3 mb-4">社團經驗</h2>
-    <div class="timeline">
-      <div class="timeline-card timeline-card-primary card shadow-sm">
-        <div class="card-body">
-          <div class="h5 mb-1">程式設計研究社 <span class="text-muted h6">社員 / 活動組員</span></div>
-          <div class="text-muted text-small mb-2">大一上－大一下</div>
-          <div>參與程式設計練習，協助社團活動規劃與執行。</div>
-        </div>
-      </div>
-      <div class="timeline-card timeline-card-primary card shadow-sm">
-        <div class="card-body">
-          <div class="h5 mb-1">AI 科技社 <span class="text-muted h6">社員 / 教學助理</span></div>
-          <div class="text-muted text-small mb-2">大一上－大一下</div>
-          <div>參與 AI 工具介紹活動，協助初學者學習 AI 工具。</div>
-        </div>
-      </div>
-      <div class="timeline-card timeline-card-primary card shadow-sm">
-        <div class="card-body">
-          <div class="h5 mb-1">系學會 / 攝影社 / 桌遊社 <span class="text-muted h6">成員 / 活動組員 / 志工</span></div>
-          <div class="text-muted text-small mb-2">大一上－大二上</div>
-          <div>協助活動場務與執行，培養跨團隊溝通與協作能力。</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <hr class="d-print-none"/>
-  <div class="page-break"></div>
-  <div class="education-section px-3 px-lg-4 pb-4">
-    <h2 class="h3 mb-4">學歷</h2>
-    <div class="timeline">
-      <div class="timeline-card timeline-card-success card shadow-sm">
-        <div class="card-body">
-          <div class="h5 mb-1">弘光科技大學 <span class="text-muted h6">智慧科技應用系</span></div>
-          <div class="text-muted text-small mb-2">2024－至今</div>
-          <div>大學二年級，聚焦 AI、Web 與智慧科技整合實作。</div>
-        </div>
-      </div>
-      <div class="timeline-card timeline-card-success card shadow-sm">
-        <div class="card-body">
-          <div class="h5 mb-1">○○科技大學 <span class="text-muted h6">專科／進修</span></div>
-          <div class="text-muted text-small mb-2">2022－2024</div>
-          <div>持續深化資訊技術與專題實作能力。</div>
-        </div>
-      </div>
-      <div class="timeline-card timeline-card-success card shadow-sm">
-        <div class="card-body">
-          <div class="h5 mb-1">台中市○○高級工業職業學校 <span class="text-muted h6">資訊相關科系</span></div>
-          <div class="text-muted text-small mb-2">2019－2022</div>
-          <div>建立程式設計與資訊應用基礎。</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <hr class="d-print-none"/>
-  <div class="px-3 px-lg-4 pb-4">
-    <h2 class="h3 mb-3">課外活動經驗</h2>
-    <div class="row g-3">
-      <div class="col-md-6 col-xl-4"><div class="mini-card card"><div class="card-body"><div class="text-muted text-small">2024</div><div class="h6 mb-1">AI 工具體驗工作坊</div><div class="text-secondary">學習生成式 AI 應用。</div></div></div></div>
-      <div class="col-md-6 col-xl-4"><div class="mini-card card"><div class="card-body"><div class="text-muted text-small">2024</div><div class="h6 mb-1">網頁設計工作坊</div><div class="text-secondary">練習 HTML/CSS 與 RWD。</div></div></div></div>
-      <div class="col-md-6 col-xl-4"><div class="mini-card card"><div class="card-body"><div class="text-muted text-small">2024</div><div class="h6 mb-1">程式設計競賽</div><div class="text-secondary">完成指定程式題目。</div></div></div></div>
-      <div class="col-md-6 col-xl-4"><div class="mini-card card"><div class="card-body"><div class="text-muted text-small">2025</div><div class="h6 mb-1">智慧科技成果展</div><div class="text-secondary">展示專題作品。</div></div></div></div>
-      <div class="col-md-6 col-xl-4"><div class="mini-card card"><div class="card-body"><div class="text-muted text-small">2025</div><div class="h6 mb-1">網頁專題製作</div><div class="text-secondary">團隊開發網站專題。</div></div></div></div>
-      <div class="col-md-6 col-xl-4"><div class="mini-card card"><div class="card-body"><div class="text-muted text-small">2025</div><div class="h6 mb-1">校外科技參訪</div><div class="text-secondary">了解科技產業與職場。</div></div></div></div>
-    </div>
-  </div>
-  <hr class="d-print-none"/>
-  <div class="px-3 px-lg-4 pb-4">
-    <h2 class="h3 mb-3">專業證照</h2>
-    <div class="row g-3">
-      <div class="col-md-6 col-xl-4"><div class="mini-card card"><div class="card-body"><div class="h6 mb-1">MOS Word Associate</div><div class="text-secondary">Microsoft｜2024</div></div></div></div>
-      <div class="col-md-6 col-xl-4"><div class="mini-card card"><div class="card-body"><div class="h6 mb-1">MOS Excel Associate</div><div class="text-secondary">Microsoft｜2024</div></div></div></div>
-      <div class="col-md-6 col-xl-4"><div class="mini-card card"><div class="card-body"><div class="h6 mb-1">MOS PowerPoint Associate</div><div class="text-secondary">Microsoft｜2024</div></div></div></div>
-      <div class="col-md-6 col-xl-4"><div class="mini-card card"><div class="card-body"><div class="h6 mb-1">TQC+ HTML5 網頁設計</div><div class="text-secondary">電腦技能基金會｜2024</div></div></div></div>
-      <div class="col-md-6 col-xl-4"><div class="mini-card card"><div class="card-body"><div class="h6 mb-1">TQC+ CSS 網頁設計</div><div class="text-secondary">電腦技能基金會｜2024</div></div></div></div>
-      <div class="col-md-6 col-xl-4"><div class="mini-card card"><div class="card-body"><div class="h6 mb-1">TQC+ JavaScript 程式設計</div><div class="text-secondary">電腦技能基金會｜2025</div></div></div></div>
-    </div>
-  </div>
-  <hr class="d-print-none"/>
-  <div class="px-3 px-lg-4 pb-4">
-    <h2 class="h3 mb-3">獲獎記錄（節錄）</h2>
-    <div class="row g-3">
-      <div class="col-md-6 col-xl-4"><div class="mini-card card"><div class="card-body"><div class="h6 mb-1">系網頁設計競賽｜第一名</div><div class="text-secondary">2025</div></div></div></div>
-      <div class="col-md-6 col-xl-4"><div class="mini-card card"><div class="card-body"><div class="h6 mb-1">AI 創意設計競賽｜第二名</div><div class="text-secondary">2025</div></div></div></div>
-      <div class="col-md-6 col-xl-4"><div class="mini-card card"><div class="card-body"><div class="h6 mb-1">智慧科技專題競賽｜優選</div><div class="text-secondary">2025</div></div></div></div>
-      <div class="col-md-6 col-xl-4"><div class="mini-card card"><div class="card-body"><div class="h6 mb-1">程式設計競賽｜佳作</div><div class="text-secondary">2024</div></div></div></div>
-      <div class="col-md-6 col-xl-4"><div class="mini-card card"><div class="card-body"><div class="h6 mb-1">AI 創意應用競賽｜佳作</div><div class="text-secondary">2024</div></div></div></div>
-      <div class="col-md-6 col-xl-4"><div class="mini-card card"><div class="card-body"><div class="h6 mb-1">學習成果展｜優等 / 優選</div><div class="text-secondary">2024-2025</div></div></div></div>
-    </div>
-  </div>
-  <hr class="d-print-none"/>
-  <div class="contant-section px-3 px-lg-4 pb-4" id="contact">
-    <h2 class="h3 text mb-3">聯絡資訊</h2>
-    <div class="row">
-      <div class="col-md-7 d-print-none">
-        <div class="my-2"><div class="mini-card card"><div class="card-body"><h5 class="mb-3">興趣與職涯目標</h5><p class="mb-2 text-secondary">興趣：AI、程式設計、網頁開發、智慧科技、攝影、旅行。</p><p class="mb-0 text-secondary">期望成為具備「AI × Web × 智慧科技」跨域能力的人才，持續累積專案開發與團隊合作經驗。</p></div></div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="mt-2">
-          <h3 class="h6">Email</h3>
-          <div class="pb-2 text-secondary">fgchen@gmail.com</div>
-          <h3 class="h6">LinkedIn</h3>
-          <div class="pb-2 text-secondary">Chen FuKuo</div>
-          <h3 class="h6">Facebook</h3>
-          <div class="pb-2 text-secondary">Chen FuKuo</div>
-          <h3 class="h6">Instagram</h3>
-          <div class="pb-2 text-secondary">@chen_fukou</div>
-          <h3 class="h6">GitHub</h3>
-          <div class="pb-2 text-secondary">chenfukou</div>
-          <h3 class="h6">Twitter</h3>
-          <div class="pb-2 text-secondary">@chenfukou</div>
-        </div>
-      </div>
-      <div class="col d-none d-print-block">
-        <div class="mt-2">
-          <div>
-            <div class="mb-2">
-              <div class="text-dark"><i class="fab fa-linkedin mr-1"></i><span>linkedin.com</span>
-              </div>
+
+            {/* 桌面端 CTA 按鈕 */}
+            <div className="hidden sm:flex items-center gap-3">
+              <button
+                onClick={onOpenModal}
+                className="bg-accent hover:bg-accent-hover text-white font-semibold text-sm px-4 py-2.5 rounded-lg shadow-sm hover:shadow-accent-glow transition-all flex items-center gap-2 transform active:scale-95"
+              >
+                <i className="fa-solid fa-paper-plane text-xs"></i>
+                <span>預約演講 / 合作洽詢</span>
+              </button>
             </div>
-            <div class="mb-2">
-              <div class="text-dark"><i class="fab fa-facebook mr-1"></i><span>facebook.com</span>
-              </div>
-            </div>
-            <div class="mb-2">
-              <div class="text-dark"><i class="fab fa-instagram mr-1"></i><span>instagram.com/chen_fukou</span>
-              </div>
-            </div>
-            <div class="mb-2">
-              <div class="text-dark"><i class="fab fa-github mr-1"></i><span>github.com/chenfukou</span>
-              </div>
+
+            {/* 手機版漢堡按鈕 */}
+            <div className="flex sm:hidden items-center gap-2">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="p-2 rounded-lg text-slate-600 hover:text-primary hover:bg-slate-100 transition-colors"
+                aria-label="選單開關"
+              >
+                <i className={`fa-solid ${isOpen ? 'fa-xmark' : 'fa-bars'} text-xl`}></i>
+              </button>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div></div>
-    </div>
-    <footer class="pt-4 pb-4 text-muted text-center d-print-none">
-      <div class="container">
-        <div class="my-3">
-          <div class="h4">陳富國 Chen FuKuo</div>
-          <div class="footer-nav">
-            <nav role="navigation">
-              <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link" href="mailto:fgchen@gmail.com" title="Email"><i class="fas fa-envelope"></i><span class="menu-title sr-only">Email</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="https://www.facebook.com" title="Facebook"><i class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/chen_fukou" title="Instagram"><i class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="https://github.com/chenfukou" title="Github"><i class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a>
-                </li>
-              </ul>
-            </nav>
+
+          {/* 手機版折疊選單 */}
+          {isOpen && (
+            <div className="lg:hidden bg-white border-t border-slate-100 px-4 pt-3 pb-6 space-y-2 shadow-lg animate-fadeIn">
+              {navLinks.map((link, idx) => (
+                <a
+                  key={idx}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="block px-3 py-2 text-base font-medium text-slate-700 hover:bg-surface/50 hover:text-primary rounded-md transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
+              <div className="pt-2">
+                <button
+                  onClick={() => { setIsOpen(false); onOpenModal(); }}
+                  className="w-full bg-accent hover:bg-accent-hover text-white font-semibold py-3 rounded-lg shadow-sm flex items-center justify-center gap-2"
+                >
+                  <i className="fa-solid fa-paper-plane"></i>
+                  <span>預約演講 / 合作洽詢</span>
+                </button>
+              </div>
+            </div>
+          )}
+        </header>
+      );
+    }
+
+    // =========================================================================
+    // 首頁主視覺 (Hero Section)
+    // =========================================================================
+    function Hero({ onOpenModal }) {
+      const handlePrint = () => {
+        window.print();
+      };
+
+      return (
+        <section id="about" className="relative overflow-hidden pt-10 pb-16 lg:py-20 bg-gradient-to-b from-surface/40 via-white to-slate-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+              
+              {/* 左側照片與形象 */}
+              <div className="lg:col-span-5 flex flex-col items-center">
+                <div className="relative group">
+                  {/* 背景裝飾光環 (符合 style.md 配色) */}
+                  <div className="absolute -inset-1.5 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+                  
+                  {/* 頭像外框 */}
+                  <div className="relative w-64 h-72 sm:w-72 sm:h-80 md:w-80 md:h-96 rounded-2xl overflow-hidden shadow-2xl bg-white border-4 border-white">
+                    <img
+                      src="images/fgchen-croped.png"
+                      alt={CV_DATA.name}
+                      className="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105"
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80";
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/80 via-transparent to-transparent opacity-60"></div>
+                    <div className="absolute bottom-4 left-4 right-4 text-white">
+                      <div className="font-bold text-xl drop-shadow-md">{CV_DATA.name}</div>
+                      <div className="text-xs text-surface font-light drop-shadow-sm">國立成功大學工程科學博士</div>
+                    </div>
+                  </div>
+
+                  {/* 浮動資深徽章 */}
+                  <div className="absolute -bottom-4 -right-2 bg-white rounded-xl shadow-lg border border-slate-100 p-2.5 flex items-center gap-2.5 animate-bounce-subtle">
+                    <div className="w-9 h-9 rounded-lg bg-accent text-white flex items-center justify-center font-bold text-sm">
+                      <i className="fa-solid fa-award"></i>
+                    </div>
+                    <div>
+                      <div className="text-[11px] text-slate-500 font-medium">產官學資歷</div>
+                      <div className="text-xs font-bold text-primary">20+ 年教研成就</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 右側文字簡介與 CTA */}
+              <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface text-primary font-semibold text-xs border border-secondary/30">
+                  <span className="w-2 h-2 rounded-full bg-secondary"></span>
+                  弘光科技大學 助理教授 / 前系副主任
+                </div>
+
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary tracking-tight leading-tight">
+                  {CV_DATA.name}
+                  <span className="block text-xl sm:text-2xl font-semibold text-secondary mt-2">
+                    {CV_DATA.title}
+                  </span>
+                </h1>
+
+                <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                  {CV_DATA.bio}
+                  專精於演算法、分散式物聯網、大語言模型與深度學習應用，致力於培育前瞻科技實戰人才並推動產學創新賦能。
+                </p>
+
+                {/* 數據統計 Badges (20+, 25+, 50+, 100+) */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+                  {CV_DATA.stats.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="bg-white/90 backdrop-blur-sm border border-slate-200/80 rounded-xl p-3 shadow-sm hover:shadow-md transition-shadow text-center"
+                    >
+                      <div className="text-secondary text-lg mb-1">
+                        <i className={`fa-solid ${item.icon}`}></i>
+                      </div>
+                      <div className="text-2xl font-black text-primary font-mono">{item.count}</div>
+                      <div className="text-xs font-semibold text-slate-700">{item.label}</div>
+                      <div className="text-[10px] text-slate-400 mt-0.5 truncate">{item.desc}</div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* 行動呼籲雙按鈕 + 列印功能 */}
+                <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                  {/* 主要 CTA */}
+                  <button
+                    onClick={onOpenModal}
+                    className="bg-accent hover:bg-accent-hover text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-accent/30 hover:shadow-accent-glow transition-all flex items-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0 text-base"
+                  >
+                    <i className="fa-solid fa-calendar-check"></i>
+                    <span>預約演講 / 產學合作洽詢</span>
+                  </button>
+
+                  {/* 次要 CTA: 滾動瀏覽專案 */}
+                  <a
+                    href="#projects"
+                    className="bg-white hover:bg-slate-50 text-primary border-2 border-primary/20 hover:border-primary font-semibold px-5 py-3 rounded-xl shadow-sm transition-all flex items-center gap-2 text-sm"
+                  >
+                    <i className="fa-solid fa-diagram-project text-secondary"></i>
+                    <span>瀏覽精選專案</span>
+                  </a>
+
+                  {/* 列印/下載 PDF 履歷按鈕 */}
+                  <button
+                    onClick={handlePrint}
+                    className="bg-surface hover:bg-surface-dark text-primary font-semibold px-4 py-3 rounded-xl transition-all flex items-center gap-2 text-sm border border-secondary/20"
+                    title="喚起列印或另存為 PDF 履歷"
+                  >
+                    <i className="fa-solid fa-print"></i>
+                    <span>列印 / 存為 PDF</span>
+                  </button>
+                </div>
+
+                <div className="text-xs text-slate-500 pt-1 flex items-center justify-center lg:justify-start gap-3">
+                  <span><i className="fa-regular fa-clock text-accent mr-1"></i> 平均 24 小時內回覆邀約</span>
+                  <span>•</span>
+                  <span><i className="fa-solid fa-shield-halved text-secondary mr-1"></i> 產學保密與專屬客製</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // =========================================================================
+    // 專業經歷 (Experience Timeline Component)
+    // =========================================================================
+    function ExperienceTimeline() {
+      return (
+        <section id="experience" className="py-16 bg-white border-t border-slate-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface text-primary text-xs font-semibold uppercase tracking-wider mb-2">
+                <i className="fa-solid fa-briefcase"></i> 專業資歷
+              </div>
+              <h2 className="text-3xl font-extrabold text-primary">
+                教學研究與業界歷練
+              </h2>
+              <p className="text-slate-600 text-sm mt-2">
+                從企業級大型主機維護到大專校院系務主管，累積超過 30 年紮實的資訊軟硬體與高教管理經驗。
+              </p>
+            </div>
+
+            {/* 時間軸本體 */}
+            <div className="relative border-l-2 border-surface max-w-4xl mx-auto ml-4 sm:ml-auto pl-6 sm:pl-8 space-y-10">
+              {CV_DATA.experiences.map((exp, idx) => (
+                <div key={idx} className="relative group break-inside-avoid">
+                  {/* 時間軸節點 Icon */}
+                  <div className="absolute -left-[35px] sm:-left-[43px] top-1 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border-4 border-secondary group-hover:border-accent text-secondary group-hover:text-accent flex items-center justify-center shadow-md transition-all">
+                    <i className={`fa-solid ${exp.icon} text-sm sm:text-base`}></i>
+                  </div>
+
+                  {/* 內容卡片 */}
+                  <div className="bg-slate-50/80 hover:bg-white rounded-xl p-5 border border-slate-200/80 shadow-custom-card hover:shadow-custom-hover transition-all duration-300">
+                    <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                      <span className="inline-block px-3 py-0.5 bg-surface text-primary text-xs font-bold rounded-full">
+                        {exp.period}
+                      </span>
+                      <span className="text-xs font-medium px-2 py-0.5 bg-slate-200/70 text-slate-700 rounded">
+                        {exp.badge}
+                      </span>
+                    </div>
+
+                    <h3 className="text-lg font-bold text-primary flex items-center gap-2">
+                      <span>{exp.organization}</span>
+                      <span className="text-secondary text-base font-semibold">• {exp.role}</span>
+                    </h3>
+
+                    <p className="text-slate-600 text-sm mt-2 leading-relaxed">
+                      {exp.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // =========================================================================
+    // 精選研究專案 (Projects Component)
+    // 支援分類篩選 (全部、AI/IoT、Web、創新教育) 與情境式 CTA
+    // =========================================================================
+    function Projects({ onOpenModal }) {
+      const [filter, setFilter] = useState("all");
+
+      const filteredProjects = CV_DATA.projects.filter(p => {
+        if (filter === "all") return true;
+        if (filter === "ai_iot") return p.category === "ai_iot" || p.category === "web_iot";
+        if (filter === "web") return p.category === "web_fullstack" || p.category === "web_iot";
+        if (filter === "edtech") return p.category === "edtech_sim";
+        return true;
+      });
+
+      return (
+        <section id="projects" className="py-16 bg-slate-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-10">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface text-primary text-xs font-semibold uppercase tracking-wider mb-2">
+                <i className="fa-solid fa-flask"></i> 創新研發
+              </div>
+              <h2 className="text-3xl font-extrabold text-primary">
+                精選研究專案與產學成果
+              </h2>
+              <p className="text-slate-600 text-sm mt-2">
+                跨足物聯網智慧感測、深度學習 AI 應用、全端系統建置與沉浸式虛擬模擬教學。
+              </p>
+            </div>
+
+            {/* 分類篩選按鈕列 */}
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-10 no-print">
+              {[
+                { id: "all", label: "全部專案 (6)" },
+                { id: "ai_iot", label: "AI 與物聯網 (3)" },
+                { id: "web", label: "Web 全端系統 (2)" },
+                { id: "edtech", label: "創新教育與模擬 (2)" },
+              ].map(tab => (
+                <button
+                  key={tab.id}
+                  onClick={() => setFilter(tab.id)}
+                  className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
+                    filter === tab.id
+                      ? "bg-primary text-white shadow-md shadow-primary/20 scale-105"
+                      : "bg-white text-slate-600 hover:bg-surface hover:text-primary border border-slate-200"
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+
+            {/* 專案卡片網格 */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredProjects.map(proj => (
+                <div
+                  key={proj.id}
+                  className="bg-white rounded-2xl p-6 border border-slate-200 shadow-custom-card hover:shadow-custom-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between break-inside-avoid"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 rounded-xl bg-surface text-primary flex items-center justify-center text-xl shadow-inner">
+                        <i className={`fa-solid ${proj.icon}`}></i>
+                      </div>
+                      <span className="text-[11px] font-bold px-2.5 py-1 bg-surface/70 text-secondary rounded-full border border-secondary/20">
+                        {proj.categoryLabel}
+                      </span>
+                    </div>
+
+                    <h3 className="text-lg font-bold text-primary group-hover:text-secondary transition-colors mb-2.5">
+                      {proj.title}
+                    </h3>
+
+                    <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                      {proj.desc}
+                    </p>
+                  </div>
+
+                  <div>
+                    {/* 技術標籤 Tags */}
+                    <div className="flex flex-wrap gap-1.5 pt-3 border-t border-slate-100">
+                      {proj.techs.map((tech, tIdx) => (
+                        <span
+                          key={tIdx}
+                          className="text-[11px] px-2 py-0.5 bg-slate-100 text-slate-700 rounded-md font-mono font-medium"
+                        >
+                          #{tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* 專案區塊底部情境式 CTA 橫幅 */}
+            <div className="mt-12 bg-gradient-to-r from-primary to-secondary rounded-2xl p-6 sm:p-8 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 no-print">
+              <div className="space-y-1 text-center md:text-left">
+                <div className="text-accent font-bold text-sm tracking-wider uppercase">產學接軌・技術顧問</div>
+                <h3 className="text-xl sm:text-2xl font-bold">有專案研發、物聯網系統建置或演講授課需求？</h3>
+                <p className="text-surface/90 text-xs sm:text-sm">提供跨領域技術諮詢、專案評估與大專/企業內訓合作。</p>
+              </div>
+              <button
+                onClick={onOpenModal}
+                className="bg-accent hover:bg-accent-hover text-white font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/40 whitespace-nowrap transition-transform active:scale-95 text-sm"
+              >
+                立即洽談產學合作
+              </button>
+            </div>
+
+          </div>
+        </section>
+      );
+    }
+
+    // =========================================================================
+    // 專業技能 (Skills Component)
+    // =========================================================================
+    function Skills() {
+      return (
+        <section id="skills" className="py-16 bg-white border-t border-slate-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface text-primary text-xs font-semibold uppercase tracking-wider mb-2">
+                <i className="fa-solid fa-code"></i> 專業核心能力
+              </div>
+              <h2 className="text-3xl font-extrabold text-primary">
+                跨領域全方位科技技能
+              </h2>
+              <p className="text-slate-600 text-sm mt-2">
+                結合軟體工程、Web 全端開發、嵌入式物聯網硬體以及創新的教育教學法。
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {CV_DATA.skills.map((skillGroup, idx) => (
+                <div
+                  key={idx}
+                  className="bg-slate-50 rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-custom-hover transition-all duration-300 break-inside-avoid flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center text-xl mb-4 shadow-sm">
+                      <i className={`fa-solid ${skillGroup.icon}`}></i>
+                    </div>
+
+                    <h3 className="text-lg font-bold text-primary mb-1">
+                      {skillGroup.category}
+                    </h3>
+                    <div className="text-xs text-secondary font-medium mb-4">
+                      {skillGroup.highlight}
+                    </div>
+
+                    <ul className="space-y-2 mb-4">
+                      {skillGroup.items.map((item, iIdx) => (
+                        <li key={iIdx} className="text-xs sm:text-sm text-slate-700 flex items-center gap-2">
+                          <i className="fa-solid fa-check text-secondary text-xs"></i>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="pt-3 border-t border-slate-200/70 text-[11px] text-slate-400 font-medium">
+                    持續深耕與教學傳承
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // =========================================================================
+    // 專業證照 (Certificates Component)
+    // 支援 25+ 證照的分類 Tabs (資安、微軟、Java、專案管理、網路等)
+    // =========================================================================
+    function Certificates() {
+      const [activeTab, setActiveTab] = useState("all");
+
+      const tabs = [
+        { id: "all", label: "全部 (24+)", count: CV_DATA.certificates.length },
+        { id: "security", label: "資訊安全", count: CV_DATA.certificates.filter(c => c.category === "security").length },
+        { id: "dev_game", label: "系統與遊戲", count: CV_DATA.certificates.filter(c => c.category === "dev_game").length },
+        { id: "pm", label: "專案管理", count: CV_DATA.certificates.filter(c => c.category === "pm").length },
+        { id: "microsoft", label: "微軟認證", count: CV_DATA.certificates.filter(c => c.category === "microsoft").length },
+        { id: "java", label: "Java 認證", count: CV_DATA.certificates.filter(c => c.category === "java").length },
+        { id: "network", label: "網路與其他", count: CV_DATA.certificates.filter(c => c.category === "network").length },
+      ];
+
+      const filteredCerts = activeTab === "all"
+        ? CV_DATA.certificates
+        : CV_DATA.certificates.filter(c => c.category === activeTab);
+
+      return (
+        <section id="certificates" className="py-16 bg-slate-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-10">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface text-primary text-xs font-semibold uppercase tracking-wider mb-2">
+                <i className="fa-solid fa-certificate"></i> 專業公信力
+              </div>
+              <h2 className="text-3xl font-extrabold text-primary">
+                25+ 國際與國家專業證照
+              </h2>
+              <p className="text-slate-600 text-sm mt-2">
+                涵蓋資訊安全工程師、PMI 國際專案管理師 (PMP)、微軟 Specialist、昇陽 Java 講師級認證等。
+              </p>
+            </div>
+
+            {/* 標籤頁過濾 (Tabs) */}
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-8 no-print">
+              {tabs.map(tab => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                    activeTab === tab.id
+                      ? "bg-secondary text-white shadow-sm scale-105"
+                      : "bg-white text-slate-600 hover:bg-surface hover:text-primary border border-slate-200"
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+
+            {/* 證照卡片網格 */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {filteredCerts.map((cert, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white rounded-xl p-4 border border-slate-200 shadow-sm hover:border-secondary transition-all flex items-start justify-between gap-3 break-inside-avoid"
+                >
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-surface text-secondary flex items-center justify-center flex-shrink-0 text-sm mt-0.5">
+                      <i className="fa-solid fa-award"></i>
+                    </div>
+                    <div>
+                      <div className="text-xs font-semibold text-secondary">{cert.catName}</div>
+                      <h4 className="font-bold text-sm text-slate-800 leading-snug">{cert.name}</h4>
+                      <div className="text-[11px] text-slate-500 mt-1">發證機構：{cert.issuer}</div>
+                    </div>
+                  </div>
+                  <span className="text-[10px] font-mono font-semibold bg-slate-100 text-slate-600 px-2 py-0.5 rounded whitespace-nowrap">
+                    {cert.year}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // =========================================================================
+    // 學術背景 (Education Component)
+    // =========================================================================
+    function Education() {
+      return (
+        <section id="education" className="py-16 bg-white border-t border-slate-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface text-primary text-xs font-semibold uppercase tracking-wider mb-2">
+                <i className="fa-solid fa-graduation-cap"></i> 學歷里程碑
+              </div>
+              <h2 className="text-3xl font-extrabold text-primary">
+                學術研究與專業養成
+              </h2>
+              <p className="text-slate-600 text-sm mt-2">
+                成功大學工科博士直升養成，融會純熟理論與紮實電機工程實務。
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {CV_DATA.education.map((edu, idx) => (
+                <div
+                  key={idx}
+                  className="bg-slate-50 rounded-2xl p-6 border-2 border-slate-200/80 hover:border-secondary transition-all shadow-sm flex flex-col justify-between break-inside-avoid"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-surface text-primary">
+                        {edu.period}
+                      </span>
+                      <i className="fa-solid fa-building-columns text-secondary text-lg"></i>
+                    </div>
+
+                    <h3 className="text-lg font-bold text-primary mb-1">{edu.degree}</h3>
+                    <div className="font-semibold text-slate-800 text-sm mb-1">{edu.school}</div>
+                    <div className="text-xs text-secondary font-medium mb-3">{edu.department}</div>
+
+                    <div className="text-xs text-slate-500 font-medium mb-2">{edu.advisor}</div>
+                    <p className="text-xs text-slate-600 leading-relaxed">{edu.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // =========================================================================
+    // 聯絡方式與頁尾 (Contact & Footer Component)
+    // =========================================================================
+    function Footer({ onOpenModal }) {
+      const copyEmail = (email) => {
+        navigator.clipboard.writeText(email);
+        alert(`已複製信箱：${email}`);
+      };
+
+      return (
+        <footer id="contact" className="bg-primary-dark text-white pt-16 pb-12 border-t-4 border-accent">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 mb-12">
+              
+              {/* 左側個人定位 */}
+              <div className="lg:col-span-5 space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-accent text-white flex items-center justify-center font-bold text-lg">
+                    陳
+                  </div>
+                  <div>
+                    <div className="font-bold text-xl text-white">{CV_DATA.name}</div>
+                    <div className="text-xs text-surface font-light">{CV_DATA.title}</div>
+                  </div>
+                </div>
+                <p className="text-sm text-slate-300 leading-relaxed pr-6">
+                  秉持產學創新與實務育才精神，竭誠歡迎各界機關團體進行專題演講邀約、大專及企業內訓授課、智慧科技產學研發與技術顧問諮詢。
+                </p>
+                <div className="pt-2">
+                  <button
+                    onClick={onOpenModal}
+                    className="bg-accent hover:bg-accent-hover text-white text-sm font-bold px-5 py-2.5 rounded-lg shadow-md transition-all flex items-center gap-2"
+                  >
+                    <i className="fa-solid fa-envelope"></i>
+                    <span>立即填表聯絡我</span>
+                  </button>
+                </div>
+              </div>
+
+              {/* 中間聯絡資訊 */}
+              <div className="lg:col-span-4 space-y-3">
+                <h4 className="text-sm font-bold text-surface tracking-wider uppercase">聯絡辦公室</h4>
+                <ul className="space-y-2.5 text-xs text-slate-300">
+                  <li className="flex items-start gap-2.5">
+                    <i className="fa-solid fa-location-dot text-accent text-sm mt-0.5"></i>
+                    <span>{CV_DATA.contact.address} ({CV_DATA.contact.office})</span>
+                  </li>
+                  <li className="flex items-center gap-2.5">
+                    <i className="fa-solid fa-envelope text-accent text-sm"></i>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="font-mono">{CV_DATA.contact.emails[0]}</span>
+                      <button
+                        onClick={() => copyEmail(CV_DATA.contact.emails[0])}
+                        className="text-[10px] bg-white/10 hover:bg-white/20 text-slate-200 px-1.5 py-0.5 rounded transition-colors"
+                        title="複製信箱"
+                      >
+                        複製
+                      </button>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-2.5">
+                    <i className="fa-solid fa-globe text-accent text-sm"></i>
+                    <a
+                      href={CV_DATA.contact.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-surface underline font-mono"
+                    >
+                      fgchen.com
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              {/* 右側快速導覽與友善列印 */}
+              <div className="lg:col-span-3 space-y-3">
+                <h4 className="text-sm font-bold text-surface tracking-wider uppercase">實用工具與連結</h4>
+                <div className="space-y-2 text-xs">
+                  <button
+                    onClick={() => window.print()}
+                    className="w-full text-left bg-white/10 hover:bg-white/20 text-slate-200 px-3 py-2 rounded-lg transition-colors flex items-center justify-between"
+                  >
+                    <span><i className="fa-solid fa-print mr-2 text-surface"></i> 列印或另存 PDF 履歷</span>
+                    <i className="fa-solid fa-angle-right text-[10px]"></i>
+                  </button>
+                  <button
+                    onClick={onOpenModal}
+                    className="w-full text-left bg-white/10 hover:bg-white/20 text-slate-200 px-3 py-2 rounded-lg transition-colors flex items-center justify-between"
+                  >
+                    <span><i className="fa-solid fa-calendar mr-2 text-accent"></i> 演講與開課檔期洽詢</span>
+                    <i className="fa-solid fa-angle-right text-[10px]"></i>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+            <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+              <div>
+                © {new Date().getFullYear()} {CV_DATA.name} ({CV_DATA.englishName}). All rights reserved.
+              </div>
+              <div className="flex items-center gap-4">
+                <span>Designed with Tailwind CSS & React</span>
+                <span>•</span>
+                <a href="#about" className="hover:text-white transition-colors">
+                  <i className="fa-solid fa-arrow-up mr-1"></i> 回到頂部
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      );
+    }
+
+    // =========================================================================
+    // 預約與洽詢彈跳表單 (Modal Component)
+    // 支援：蜜罐防機器人、Google Apps Script POST 傳送、成功/失敗 Toast
+    // =========================================================================
+    function ContactModal({ isOpen, onClose, onShowToast }) {
+      // 測試資料常數：用於驗證 Google Sheet 寫入與 Gmail 自動通知
+      const TEST_DATA = {
+        name: "王大明 研發經理 (測試)",
+        organization: "全端科技創新股份有限公司",
+        email: "fgchen.test@gmail.com",
+        phone: "0912-345-678",
+        type: "演講邀約",
+        message: "【系統連線測試】這是一筆用於驗證 Google Sheet 與 GAS 後端連線的測試資料。預計邀約陳富國博士於 2026 年度進行智慧科技與物聯網創新應用之專題演講，聆聽人數約 80 人。",
+        hp_website: "" // 蜜罐隱藏欄位保持為空
+      };
+
+      const [formData, setFormData] = useState(TEST_DATA);
+      const [submitting, setSubmitting] = useState(false);
+
+      // 開啟時鎖定滾動，關閉時解除；支援 ESC 鍵關閉
+      useEffect(() => {
+        if (isOpen) {
+          document.body.style.overflow = "hidden";
+          const handleKeyDown = (e) => {
+            if (e.key === "Escape") onClose();
+          };
+          window.addEventListener("keydown", handleKeyDown);
+          return () => {
+            document.body.style.overflow = "unset";
+            window.removeEventListener("keydown", handleKeyDown);
+          };
+        } else {
+          document.body.style.overflow = "unset";
+        }
+      }, [isOpen, onClose]);
+
+      if (!isOpen) return null;
+
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+      };
+
+      const handleClear = () => {
+        setFormData({
+          name: "", organization: "", email: "", phone: "", type: "演講邀約", message: "", hp_website: ""
+        });
+      };
+
+      const handleFillTest = () => {
+        setFormData(TEST_DATA);
+      };
+
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+        setSubmitting(true);
+
+        // 蜜罐檢查：若隱藏欄位被填入，靜默模擬成功
+        if (formData.hp_website && formData.hp_website.trim() !== "") {
+          setTimeout(() => {
+            setSubmitting(false);
+            onClose();
+            onShowToast("success", "洽詢訊息已送出，陳博士將儘速與您聯繫！");
+          }, 800);
+          return;
+        }
+
+        if (GAS_WEB_APP_URL && GAS_WEB_APP_URL.trim() !== "") {
+          try {
+            await fetch(GAS_WEB_APP_URL, {
+              method: "POST",
+              mode: "no-cors", // 相容 GAS 跨域重定向
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(formData)
+            });
+            setSubmitting(false);
+            onClose();
+            onShowToast("success", "預約洽詢已成功送出！資料已寫入 Google 試算表並發送通知信。");
+          } catch (err) {
+            console.error("Submission failed:", err);
+            setSubmitting(false);
+            onShowToast("error", "送出失敗，請檢查 GAS 部署權限或稍後再試。");
+          }
+        } else {
+          // 本地開發/尚未綁定 GAS 時之友善模擬
+          setTimeout(() => {
+            console.log("Local Mock Submit Data:", formData);
+            setSubmitting(false);
+            onClose();
+            onShowToast("success", "【模擬送出成功】表單資料已驗證，實際部署時將直接寫入 Google 試算表並發送 Gmail 通知！");
+          }, 1000);
+        }
+      };
+
+      return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-fadeIn">
+          {/* 背景點擊遮罩 */}
+          <div className="absolute inset-0" onClick={onClose}></div>
+
+          {/* 表單內容面板 */}
+          <div className="relative bg-white rounded-2xl shadow-2xl max-w-lg w-full max-h-[92vh] overflow-y-auto border border-slate-100 z-10 animate-scaleUp">
+            {/* 標題欄 */}
+            <div className="bg-primary text-white p-5 rounded-t-2xl flex items-center justify-between">
+              <div>
+                <h3 className="font-bold text-lg flex items-center gap-2">
+                  <i className="fa-solid fa-paper-plane text-accent"></i>
+                  <span>預約演講 / 合作洽詢</span>
+                </h3>
+                <p className="text-xs text-surface/80 mt-0.5">
+                  表單將即時同步至 Google 試算表並發送通知信
+                </p>
+              </div>
+              <button
+                onClick={onClose}
+                className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
+                aria-label="關閉"
+              >
+                <i className="fa-solid fa-xmark text-sm"></i>
+              </button>
+            </div>
+
+            {/* 表單主體 */}
+            <form onSubmit={handleSubmit} className="p-6 space-y-4">
+              
+              {/* 測試輔助提示列 */}
+              <div className="bg-amber-50/90 border border-amber-200 rounded-xl px-3 py-2 flex flex-wrap items-center justify-between gap-2 text-xs">
+                <span className="text-amber-800 font-medium flex items-center gap-1.5">
+                  <i className="fa-solid fa-vial-circle-check text-amber-600"></i>
+                  <span>所有欄位已預填測試資料，可直接點擊送出</span>
+                </span>
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={handleFillTest}
+                    className="text-[11px] font-bold text-primary hover:text-secondary underline"
+                  >
+                    重填測試資料
+                  </button>
+                  <span className="text-amber-300">|</span>
+                  <button
+                    type="button"
+                    onClick={handleClear}
+                    className="text-[11px] text-slate-500 hover:text-slate-700 underline"
+                  >
+                    清空
+                  </button>
+                </div>
+              </div>
+
+              {/* 蜜罐隱藏欄位 (Anti-Spam) */}
+              <input
+                type="text"
+                name="hp_website"
+                value={formData.hp_website}
+                onChange={handleChange}
+                style={{ display: "none" }}
+                tabIndex="-1"
+                autoComplete="off"
+              />
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">
+                    您的姓名 / 稱謂 <span className="text-accent">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="例：王小明 經理"
+                    className="w-full text-xs sm:text-sm px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">
+                    所屬單位 / 學校 / 機構 <span className="text-accent">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="organization"
+                    required
+                    value={formData.organization}
+                    onChange={handleChange}
+                    placeholder="例：XX科技大學 / XX公司"
+                    className="w-full text-xs sm:text-sm px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">
+                    電子郵件 Email <span className="text-accent">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="name@example.com"
+                    className="w-full text-xs sm:text-sm px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">
+                    聯絡電話 / LINE ID (選填)
+                  </label>
+                  <input
+                    type="text"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="0912-345-678"
+                    className="w-full text-xs sm:text-sm px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1">
+                  洽詢項目類型 <span className="text-accent">*</span>
+                </label>
+                <select
+                  name="type"
+                  value={formData.type}
+                  onChange={handleChange}
+                  className="w-full text-xs sm:text-sm px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary bg-white"
+                >
+                  <option value="演講邀約">專題演講邀約 (物聯網 / AI / Web創新)</option>
+                  <option value="課程教學與內訓">大專院校授課 / 企業內部培訓</option>
+                  <option value="產學合作研發">產學合作計畫 / 專案委託研發</option>
+                  <option value="技術顧問諮詢">技術架構顧問 / 系統健檢諮詢</option>
+                  <option value="學生專題與升學">學生專題指導 / 升學諮詢</option>
+                  <option value="其他合作交流">其他學術或商務交流</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1">
+                  洽詢主題與需求說明 <span className="text-accent">*</span>
+                </label>
+                <textarea
+                  name="message"
+                  required
+                  rows="4"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="請簡述預計時間、演講題目、對象人數或合作專案內容細節..."
+                  className="w-full text-xs sm:text-sm px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary"
+                ></textarea>
+              </div>
+
+              <div className="pt-2 flex items-center justify-end gap-3">
+                <button
+                  type="button"
+                  onClick={onClose}
+                  className="px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold text-slate-600 hover:bg-slate-100 transition-colors"
+                >
+                  取消
+                </button>
+                <button
+                  type="submit"
+                  disabled={submitting}
+                  className="bg-accent hover:bg-accent-hover text-white font-bold px-6 py-2.5 rounded-lg text-xs sm:text-sm shadow-md shadow-accent/30 transition-all flex items-center gap-2 disabled:opacity-50"
+                >
+                  {submitting ? (
+                    <>
+                      <i className="fa-solid fa-spinner animate-spin"></i>
+                      <span>送出中...</span>
+                    </>
+                  ) : (
+                    <>
+                      <i className="fa-solid fa-check"></i>
+                      <span>確認送出預約</span>
+                    </>
+                  )}
+                </button>
+              </div>
+            </form>
           </div>
         </div>
-        <div class="text-small">
-          <div class="mb-1">&copy; Right Resume. All rights reserved.</div>
-          <div>Design - <a href="https://templateflip.com/" target="_blank">TemplateFlip</a></div>
+      );
+    }
+
+    // =========================================================================
+    // 提示通知訊息 (Toast Component)
+    // =========================================================================
+    function Toast({ toast, onClose }) {
+      if (!toast) return null;
+
+      const isSuccess = toast.type === "success";
+
+      return (
+        <div className="fixed bottom-6 right-6 z-50 max-w-md bg-white rounded-xl shadow-2xl border border-slate-200 p-4 animate-slideUp flex items-start gap-3">
+          <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-white ${
+            isSuccess ? 'bg-emerald-500' : 'bg-rose-500'
+          }`}>
+            <i className={`fa-solid ${isSuccess ? 'fa-check' : 'fa-triangle-exclamation'}`}></i>
+          </div>
+          <div className="flex-1">
+            <div className={`text-sm font-bold ${isSuccess ? 'text-emerald-800' : 'text-rose-800'}`}>
+              {isSuccess ? '送出成功' : '注意'}
+            </div>
+            <div className="text-xs text-slate-600 mt-0.5 leading-relaxed">
+              {toast.message}
+            </div>
+          </div>
+          <button onClick={onClose} className="text-slate-400 hover:text-slate-600 p-1">
+            <i className="fa-solid fa-xmark text-xs"></i>
+          </button>
         </div>
-      </div>
-    </footer>
-    <script src="scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
-    <script src="scripts/aos.js?ver=1.2.0"></script>
-    <script src="scripts/main.js?ver=1.2.0"></script>
-  </body>
+      );
+    }
+
+    // =========================================================================
+    // 手機端懸浮快速洽詢按鈕 (FAB Component)
+    // =========================================================================
+    function MobileFAB({ onOpenModal }) {
+      return (
+        <div className="fixed bottom-6 right-6 z-30 sm:hidden no-print">
+          <button
+            onClick={onOpenModal}
+            className="w-14 h-14 rounded-full bg-accent hover:bg-accent-hover text-white shadow-2xl shadow-accent/50 flex items-center justify-center text-xl transition-transform active:scale-90"
+            aria-label="快速預約演講或合作"
+          >
+            <i className="fa-solid fa-comment-dots"></i>
+          </button>
+        </div>
+      );
+    }
+
+    // =========================================================================
+    // 根元件 (Main App Component)
+    // =========================================================================
+    function App() {
+      const [isModalOpen, setIsModalOpen] = useState(false);
+      const [toast, setToast] = useState(null);
+
+      const showToast = (type, message) => {
+        setToast({ type, message });
+        setTimeout(() => setToast(null), 5000);
+      };
+
+      return (
+        <div className="min-h-screen flex flex-col">
+          {/* 1. 開頭第一列：即時到訪人數條 */}
+          <TopBar />
+
+          {/* 2. 導覽列 */}
+          <Navbar onOpenModal={() => setIsModalOpen(true)} />
+
+          {/* 3. 首頁主視覺 Hero */}
+          <Hero onOpenModal={() => setIsModalOpen(true)} />
+
+          {/* 4. 經歷時間軸 */}
+          <ExperienceTimeline />
+
+          {/* 5. 精選研究專案 */}
+          <Projects onOpenModal={() => setIsModalOpen(true)} />
+
+          {/* 6. 專業核心技能 */}
+          <Skills />
+
+          {/* 7. 25+ 專業證照 */}
+          <Certificates />
+
+          {/* 8. 學術背景 */}
+          <Education />
+
+          {/* 9. 聯絡方式與頁尾 */}
+          <Footer onOpenModal={() => setIsModalOpen(true)} />
+
+          {/* 互動彈跳 Modal 表單 */}
+          <ContactModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            onShowToast={showToast}
+          />
+
+          {/* 提示訊息 Toast */}
+          <Toast toast={toast} onClose={() => setToast(null)} />
+
+          {/* 手機版 FAB 浮動按鈕 */}
+          <MobileFAB onOpenModal={() => setIsModalOpen(true)} />
+        </div>
+      );
+    }
+
+    // 掛載渲染至 Root
+    const rootElement = document.getElementById("root");
+    const root = ReactDOM.createRoot(rootElement);
+    root.render(<App />);
+  </script>
+</body>
 </html>
